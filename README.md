@@ -1,4 +1,4 @@
-臺灣大學碩博士論文 XeLaTeX 模版
+交通大學碩博士論文 XeLaTeX 模版
 ==========
 
 
@@ -24,6 +24,12 @@
 
 
 Changelog
+----------
+  * Add NCTU watermark
+  * Rename file names
+
+
+Changelog - old
 ----------
   * v1.0
     * The first fork release
