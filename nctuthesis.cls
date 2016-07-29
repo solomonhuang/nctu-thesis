@@ -8,7 +8,7 @@
 % ----------------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ntuthesis}[2013/04/23 Thesis template for National Taiwan University]
+\ProvidesClass{nctuthesis}[2016/04/23 Thesis template for National Taiwan University]
 
 % Derived from book class
 \DeclareRobustCommand{\@typeen}{Master}
@@ -66,31 +66,99 @@
     \vspace{1cm}
     \begin{singlespace}
     \begin{center}
-      \fontsize{18}{27}\selectfont
-      \@universityzh\@collegezh\@institutezh\par
-        \@typezh{}\@classzh\par
-      {\fontsize{14}{21}\selectfont
-        \@instituteen\par
-        \@collegeen\par}
-      {\fontsize{16}{24}\selectfont
-        \@universityen\par
-        \@typeen{} \@classen\par}
+      {\fontsize{38}{38}\selectfont
+        \@universityzh\par
+      }
+
+      \vspace{1cm}
+
+      {\fontsize{28}{28}\selectfont
+        \@collegezh\hspace{2em}\@institutezh\par
+        \@typezh\@classzh\par
+      }
+
       \vspace{\fill}
-      \@titlezh\par
-      \@titleen\par
-      \vspace{\fill}
-      \@authorzh\\
-      \@authoren\par
-      \vspace{2cm}
-      指導教授：\@advisorzh\\
-      Advisor: \@advisoren\par
+
+      %\begin{minipage}[t]{0.3\textwidth}
+      {\fontsize{20}{12}\selectfont
+        \@titlezh\par
+        \vspace{0.5cm}
+        \@titleen\par
+      }
+      %\end{minipage}
+
+      %\vspace{\fill}
+
+      %\begin{minipage}[t]{0.6\textwidth}
+      {\fontsize{18}{12}\selectfont
+        研究生：\@authorzh\\
+        指導教授：\@advisorzh
+      }
+      %\end{minipage}
+
       \vspace{1.5cm}
-      中華民國 \@yearzh 年 \@monthzh 月\\
-      \@monthen, \@yearen
+
+      {\fontsize{16}{12}\selectfont
+        中華民國 \@yearzh 年 \@monthzh 月\\
+        \@monthen, \@yearen
+      }
     \end{center}
     \end{singlespace}
     \vspace{1cm}
   \end{titlepage}
+}
+
+\DeclareRobustCommand{\makebookpage}{
+  \clearpages
+  \begin{singlespace}
+
+  \begin{center}
+    {\fontsize{16}{20}\selectfont
+      \@titlezh
+      \par
+      \@titleen\par
+    }
+    \vspace{0.5cm}
+  \end{center}
+
+  \vspace{1cm}
+
+
+  \begin{center}
+    \begin{tabular*}{10cm}[t]{rlrl}
+    研究生： & \@authorzh & Student:  & \@authoren \\
+    指導教授： & \@advisorzh & Advisor: & \@advisoren
+    \end{tabular*}
+  \end{center}
+
+
+  \vspace{\fill}
+
+  \begin{center}
+    {\fontsize{16}{20}\selectfont
+      國立交通大學\\資訊學院\hspace{2em}資訊學程\\碩士論文
+      \par
+
+      \vspace{2cm}
+
+      A Thesis\\
+      Submitted to College of Computer Science\\
+      National Chiao Tung University\\
+      in partial Fulfillment of the Requirements\\
+      for the Degree of\\
+      Master of Science\\
+      in\\
+      Computer Science\\
+      \par
+      \vspace{1cm}
+      \@monthen, \@yearen
+      \par
+      \vspace{1cm}
+      中華民國 \@yearzh 年 \@monthzh 月
+    }
+  \end{center}
+
+  \end{singlespace}
 }
 
 
